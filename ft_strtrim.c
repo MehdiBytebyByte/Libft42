@@ -6,7 +6,7 @@
 /*   By: mboughra <mboughra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 13:52:52 by mboughra          #+#    #+#             */
-/*   Updated: 2023/11/06 16:21:54 by mboughra         ###   ########.fr       */
+/*   Updated: 2023/11/08 21:35:55 by mboughra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,5 @@ char	*ft_strtrim(char const *s1, char const *set)
 }
 // int	main(void)
 // {
-// 	printf("%s",ft_strtrim("NOOBOBOBOBOBOBLEAGUE OF NOOBS LEGENDSBOBOBOBOB","NOOB"));	
+// 	printf("%s",ft_strtrim("NOOOBLEAGUE OF NOOBS LEGENDSBOBOB","NOOB"));	
 // }
