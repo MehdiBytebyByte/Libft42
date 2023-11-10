@@ -6,7 +6,7 @@
 /*   By: mboughra <mboughra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 13:52:52 by mboughra          #+#    #+#             */
-/*   Updated: 2023/11/08 21:35:55 by mboughra         ###   ########.fr       */
+/*   Updated: 2023/11/10 19:21:18 by mboughra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*trimmed;
 
 	if (!s1 || !set)
-		return(NULL);
+		return (NULL);
 	start = 0;
 	if (s1[0] == '\0')
-		return(ft_strdup(""));
+		return (ft_strdup(""));
 	while (start < ft_strlen(s1) && ft_strchr(set, s1[start]))
 		start++;
 	end = ft_strlen(s1) - 1;
