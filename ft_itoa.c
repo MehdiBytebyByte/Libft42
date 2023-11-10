@@ -6,38 +6,64 @@
 /*   By: mboughra <mboughra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 12:43:54 by mboughra          #+#    #+#             */
-/*   Updated: 2023/11/09 13:51:39 by mboughra         ###   ########.fr       */
+/*   Updated: 2023/11/10 19:14:05 by mboughra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static char	*filler(char *ret, long count, long n)
+{
+	long	n2;
+
+	ret[count--] = '\0';
+	if (n > 0)
+	{
+		while (count >= 0)
+		{
+			n2 = n % 10;
+			ret[count--] = n2 + '0'; 
+			n = n / 10;
+		}
+	}
+	if (n < 0)
+	{
+		n = n * -1;
+		while (count >= 1)
+		{
+			n2 = n % 10;
+			ret[count--] = n2 + '0'; 
+			n = n / 10;
+		}
+		ret[0] = '-';
+	}
+	return (ret);
+}
+
 char	*ft_itoa(int n)
 {
-	char *ret;
-	int i;
-	int m;
-	int j;
-	
-	m = n;
-	j = 0;
-	i = 0;
-	while (m != 0)
-	{
-		m = m / 10;
-		i++;
-	}
-	while (0 != i)
-	{
-		ret[j] ==
-	}
-	
-}
-int main(void)
-{
-	// ft_itoa(1337);
+	long		count;
+	long		n2;
+	char		*ret;
 
-int a = -10;
-int b = 10;
-	printf("%d",a / b);
+	count = 0;
+	n2 = n;
+	if (n == '\0')
+		return (ft_strdup("0"));
+	while (n2 != 0)
+	{
+		n2 = n2 / 10;
+		count++;
+	}
+	if (n < 0)
+		count++;
+	ret = (char *)malloc(sizeof(char) * count + 1);
+	if (!ret)
+		return (NULL);
+	ret = filler(ret, count, n);
+	return (ret);
 }
+// int main(void)
+// {
+// 	printf("%s",ft_itoa(0));
+// }
