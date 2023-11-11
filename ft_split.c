@@ -6,7 +6,7 @@
 /*   By: mboughra <mboughra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 16:30:25 by mboughra          #+#    #+#             */
-/*   Updated: 2023/11/10 14:39:48 by mboughra         ###   ########.fr       */
+/*   Updated: 2023/11/11 19:45:04 by mboughra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,6 @@ static int	ft_subscounter(const char *str, char c)
 		return (1);
 	return (count);
 }
-
-
 static void coppier(char *dest, char *src , int t,char c)
 {
     int i = 0;

@@ -1,25 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboughra <mboughra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/10 22:36:55 by mboughra          #+#    #+#             */
-/*   Updated: 2023/11/11 14:00:13 by mboughra         ###   ########.fr       */
+/*   Created: 2023/11/11 19:00:51 by mboughra          #+#    #+#             */
+/*   Updated: 2023/11/11 22:15:14 by mboughra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+t_list	*ft_lstnew(void *content)
 {
-	int	i;
+	t_list	*e1;
 
-	i = 0;
-	while (s[i])
-	{
-		write (fd, &s[i], 1);
-		i++;
-	}
+	e1 = malloc(sizeof(t_list));
+	if (!e1)
+		return (NULL);
+	e1->content = content;
+	e1->next = NULL;
+	return (e1);
 }
+// int	main(void)
+// {
+// 	t_list *abcd = ft_lstnew("abcdf");
+// 	printf("%s",(char *)abcd->content);
+// }
