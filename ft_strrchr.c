@@ -6,7 +6,7 @@
 /*   By: mboughra <mboughra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 19:30:08 by mboughra          #+#    #+#             */
-/*   Updated: 2023/11/05 14:17:51 by mboughra         ###   ########.fr       */
+/*   Updated: 2023/11/12 10:19:42 by mboughra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,12 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	unsigned char	c_char;
 	size_t			i;
 	unsigned char	*str;
+	unsigned char	c_char;
 
-	str = (unsigned char *)s;
 	i = ft_strlen(s);
+	str = (unsigned char *)s;
 	c_char = (unsigned char)c;
 	if (c_char == '\0')
 		return ((char *)&str[i]);
