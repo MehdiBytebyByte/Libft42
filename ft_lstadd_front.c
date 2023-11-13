@@ -6,7 +6,7 @@
 /*   By: mboughra <mboughra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/11 21:40:52 by mboughra          #+#    #+#             */
-/*   Updated: 2023/11/12 15:13:49 by mboughra         ###   ########.fr       */
+/*   Updated: 2023/11/13 12:09:07 by mboughra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,4 +42,10 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 // 		current = current -> next;
 // 	}
 // 	printf("the amount of nodes are %d",count);
+// }
+
+// int	main(void)
+// {
+// 	t_list root = NULL;
+	
 // }

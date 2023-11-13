@@ -6,7 +6,7 @@
 /*   By: mboughra <mboughra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 20:14:20 by mboughra          #+#    #+#             */
-/*   Updated: 2023/11/10 21:49:41 by mboughra         ###   ########.fr       */
+/*   Updated: 2023/11/13 12:08:46 by mboughra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,8 +49,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 //         free(result);
 //     }
 //     else
-//     {
-//         printf("Memory allocation failed.\n");
-//
-//     return 0;
+// 		printf("Memory allocation failed.\n");
+    
+// 	return 0;
 // }
