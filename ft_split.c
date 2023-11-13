@@ -6,11 +6,25 @@
 /*   By: mboughra <mboughra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 16:30:25 by mboughra          #+#    #+#             */
-/*   Updated: 2023/11/11 19:45:04 by mboughra         ###   ########.fr       */
+/*   Updated: 2023/11/13 20:38:01 by mboughra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+char *eyecopy(char *str, char *ret,size_t size)
+{
+	size_t i;
+	i = 0;
+	
+	while (i < size)
+	{
+		ret[i] = str[i + size];
+		i++;
+	}
+	ret[i] = '\0';
+}
+
 
 static int	ft_subscounter(const char *str, char c)
 {
@@ -32,86 +46,55 @@ static int	ft_subscounter(const char *str, char c)
 		return (1);
 	return (count);
 }
-static void coppier(char *dest, char *src , int t,char c)
+static int	ft_subslen(const char *str, char c,int *i)
 {
-    int i = 0;
-	int j = 0;
-	while(src[i] == c)
-		i++;
-	while (j < t)
-	{
-    dest[j] = src[i];
-	j++;
-	i++;
-	}
-	dest[t] = '\0';
-}
-static char	*allocater(char	*str, char	c,int *i)
-{
-	char	*copy;
-	int		t;
-	int		originali = *i;
+	int	size;
+
+	size = 0;
 	
-	t = 0;
-	while ((str[*i]) == c)
-		(*i)++;
-	while (str[*i] && str[*i] != c)
+	while(str[*i] == c)
+			(*i)++;
+	while(str[*i] && str[*i] != c)
 	{
-		t++;
+		size++;
 		(*i)++;
 	}
-	// if(t != 0)
-		copy = (char *)malloc(sizeof(char) * (t + 1));
-	if (!copy)
-		return (NULL);
-	coppier(copy, str + originali, t ,c);
-	return(copy);
+	return (size);
 }
 char **ft_split(char const *s, char c)
 {
-	int		j;
-	int		i;
-	int 	sub;
-	char	**ret;
-
-	j = 0;
+	size_t size;
+	size_t i;
+	size_t j;
+	char **ret;
+	
 	i = 0;
-	if(!s)
+	j = 0;
+	size = ft_subscounter(s,c);
+	ret = (char **)malloc(sizeof(char *) * (size + 1));
+	if(!ret)
 		return(NULL);
-	sub = ft_subscounter(s,c);
-	ret = (char **)malloc(sizeof(char *) * (sub + 1));
-	if (!ret)
-		return (NULL);
-	while (j < sub)
+	while(i < size + 1)
 	{
-		ret[j] = allocater((char *)s,c,&i);
-		if (ret[j] == (NULL))
+		ret[j] = (char *)malloc(sizeof(ft_subslen(s,c,&i)) + 1);
+		if(!ret[j])
 		{
-			while (j-- >= 0)
-				free(ret[j--]);
-			free(ret);
-			return(NULL);
+			while(j-- > 0)
+			{
+				free[ret[j]];
+			}
+			free[ret];
 		}
-		j++;
+		eyecopy(str,ret[j],ft_subslen(s,c,&i) + 1);
+		// give i it's new vallue
 	}
-	return(ret);
+	
+return(ret);
 }
-
-// int main()
-// {
-//     char s[] = ".....hello.world.l.13.";
-//     char c = '.';
-// 	int		i;
-//     char **result = ft_split(s, c);
-	
-// 	printf("number of subs is %d\n",ft_subscounter(s,c));
-
-// 	i  = 0;
-// 	while (result[i] != NULL)
-//     {
-//         printf("%s\n", result[i]);
-//         free(result[i]);
-//         i++;
-//     }
-// }
-	
+int	main(void)
+{
+	char *a = "..abc...c.d.c.d...";
+	char b = '.';
+	int  i = 0;
+	printf("%d",ft_subslen(a,b,&i));
+}
