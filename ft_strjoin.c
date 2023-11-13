@@ -6,7 +6,7 @@
 /*   By: mboughra <mboughra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 21:06:18 by mboughra          #+#    #+#             */
-/*   Updated: 2023/11/10 19:24:10 by mboughra         ###   ########.fr       */
+/*   Updated: 2023/11/13 17:17:42 by mboughra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	s1len;
 	size_t	s2len;
 
-	s1len = ft_strlen(s1);
-	s2len = ft_strlen(s2);
 	if (!s1 || !s2)
 		return (NULL);
+	s1len = ft_strlen(s1);
+	s2len = ft_strlen(s2);
 	str = (char *)malloc(s1len + s2len + 1);
 	if (!str)
 		return (NULL);
