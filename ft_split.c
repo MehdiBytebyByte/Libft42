@@ -6,27 +6,14 @@
 /*   By: mboughra <mboughra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 16:30:25 by mboughra          #+#    #+#             */
-/*   Updated: 2023/11/13 20:38:01 by mboughra         ###   ########.fr       */
+/*   Updated: 2023/11/14 22:32:43 by mboughra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *eyecopy(char *str, char *ret,size_t size)
-{
-	size_t i;
-	i = 0;
-	
-	while (i < size)
-	{
-		ret[i] = str[i + size];
-		i++;
-	}
-	ret[i] = '\0';
-}
 
-
-static int	ft_subscounter(const char *str, char c)
+static int	ft_subscounter(char *str, char c)
 {
 	int	count;
 	int	i;
@@ -37,64 +24,101 @@ static int	ft_subscounter(const char *str, char c)
 	{
 		if (str[i] != c ){
 			count++;
-		while (str[i] != c && str[i])
-			i++;}
-		while (str[i] == c)
+		while (str[i] && str[i] != c)
+			i++;
+		}
+		while (str[i] && str[i] == c)
 			i++;
 	}
-	if (count == 0)
-		return (1);
 	return (count);
 }
-static int	ft_subslen(const char *str, char c,int *i)
+static char *coppier(char *s,int y,int x)
 {
-	int	size;
-
-	size = 0;
+	int i;
+	int len;
+	char *splited;
 	
-	while(str[*i] == c)
-			(*i)++;
-	while(str[*i] && str[*i] != c)
+	i = 0;
+	len = (x - y );
+	splited = (char *)malloc(sizeof(char) * (len + 1));
+	if(splited == NULL)
+		return(NULL);
+	while(s[i] && i < len && s[i + y])
 	{
-		size++;
-		(*i)++;
+		splited[i] = s[i + y];
+		i++;
 	}
-	return (size);
+	splited[i] = '\0';
+	return (splited); 
+}
+static void freemem(char **splited)
+{
+	int i;
+	
+	i = 0;
+	while (splited[i])
+	{
+		free(splited[i]);
+		i++;
+	}
+}
+static char	**allocater(char *str, char c, int nsubs,char **splited)
+{
+	int	x;
+	int	y;
+	int index;
+	
+	x = 0;
+	index = 0;
+	while(index < nsubs && str[x])
+	{
+		if(str[x] != c)
+		{
+			y = x;
+			while(str[x] != c && str[x])
+				x++;
+			splited[index++] = coppier(str,y,x);
+			if(splited[index - 1] == NULL)
+			{
+				freemem(splited);
+				free(splited);
+				return (NULL);
+			}
+		}
+		else
+			x++;
+	}
+	return(splited);
 }
 char **ft_split(char const *s, char c)
 {
-	size_t size;
-	size_t i;
-	size_t j;
-	char **ret;
+	int		i;
+	int		nsubs;
+	char	**splited;
 	
 	i = 0;
-	j = 0;
-	size = ft_subscounter(s,c);
-	ret = (char **)malloc(sizeof(char *) * (size + 1));
-	if(!ret)
+	nsubs = ft_subscounter((char *)s,c);
+	splited = (char **)malloc(sizeof(char *) * (nsubs + 1));
+	if(!splited)
 		return(NULL);
-	while(i < size + 1)
-	{
-		ret[j] = (char *)malloc(sizeof(ft_subslen(s,c,&i)) + 1);
-		if(!ret[j])
-		{
-			while(j-- > 0)
-			{
-				free[ret[j]];
-			}
-			free[ret];
-		}
-		eyecopy(str,ret[j],ft_subslen(s,c,&i) + 1);
-		// give i it's new vallue
-	}
-	
-return(ret);
+	splited = allocater((char *)s,c,nsubs,splited);
+	if (splited == NULL)
+		return (NULL);
+	splited[nsubs] = NULL;
+	return(splited);
 }
-int	main(void)
-{
-	char *a = "..abc...c.d.c.d...";
-	char b = '.';
-	int  i = 0;
-	printf("%d",ft_subslen(a,b,&i));
-}
+// int main(void)
+// {
+//     const char *input = "hello";
+//     char delimiter = ' ';
+// 	char **result = ft_split(input,delimiter);
+// 	int i = 0;
+// 	while (result[i])
+// 	{
+// 		printf("%s",result[i]);
+// 		i++;
+// 	}
+// 	//printf("%d",ft_subscounter(input,delimiter));
+//     return 0;
+// }
+
