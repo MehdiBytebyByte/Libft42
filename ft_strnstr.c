@@ -6,14 +6,11 @@
 /*   By: mboughra <mboughra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 13:44:54 by mboughra          #+#    #+#             */
-/*   Updated: 2023/11/05 14:18:00 by mboughra         ###   ########.fr       */
+/*   Updated: 2023/11/15 12:13:35 by mboughra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-// kndwro 3la needle fhaystack ta kal9aw klma kamla or ( i tkbr 3la len )
-// else dima NULL
 
 char	*ft_strnstr(const char	*haystack, const char	*needle, size_t	len)
 {
@@ -21,6 +18,8 @@ char	*ft_strnstr(const char	*haystack, const char	*needle, size_t	len)
 	size_t	j;
 
 	i = 0;
+	if (!haystack && len == 0)
+		return (NULL);
 	if (needle[i] == '\0')
 		return ((char *)haystack);
 	while (haystack[i])
@@ -42,10 +41,10 @@ char	*ft_strnstr(const char	*haystack, const char	*needle, size_t	len)
 
 // int	main(void)
 // {
-// 	char *haystack = "foo bar baz";
+// 	char *haystack = NULL;
 // 	char *needle = "ba";
-// 	printf("%s\n",strnstr(haystack,needle,6));
-// 	char *haystack2= "foo bar baz";
+// 	printf("%s\n",strnstr(haystack,needle,0));
+// 	char *haystack2 = NULL;
 // 	char *needle2 = "ba";
-// 	printf("%s",ft_strnstr(haystack2,needle2,6));
+// 	printf("%s\n",ft_strnstr(haystack2,needle2,0));
 // }

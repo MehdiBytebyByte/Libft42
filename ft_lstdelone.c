@@ -6,7 +6,7 @@
 /*   By: mboughra <mboughra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 11:29:28 by mboughra          #+#    #+#             */
-/*   Updated: 2023/11/13 14:03:27 by mboughra         ###   ########.fr       */
+/*   Updated: 2023/11/15 17:45:42 by mboughra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,12 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	if(lst)
+	if (!lst || !del)
+		return ;
+	if (lst && del)
 	{
-	del(lst->content);
-	free(lst);
+		del (lst->content);
+		free (lst);
 	}
 }
 // void del(void *llist)

@@ -6,7 +6,7 @@
 /*   By: mboughra <mboughra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/11 19:00:51 by mboughra          #+#    #+#             */
-/*   Updated: 2023/11/11 22:15:14 by mboughra         ###   ########.fr       */
+/*   Updated: 2023/11/15 20:30:52 by mboughra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,3 @@ t_list	*ft_lstnew(void *content)
 	e1->next = NULL;
 	return (e1);
 }
-// int	main(void)
-// {
-// 	t_list *abcd = ft_lstnew("abcdf");
-// 	printf("%s",(char *)abcd->content);
-// }

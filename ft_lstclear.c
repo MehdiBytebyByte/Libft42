@@ -6,15 +6,19 @@
 /*   By: mboughra <mboughra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 14:00:47 by mboughra          #+#    #+#             */
-/*   Updated: 2023/11/13 16:34:00 by mboughra         ###   ########.fr       */
+/*   Updated: 2023/11/15 13:48:20 by mboughra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstclear(t_list **lst, void (*del)(void*))
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	t_list *current,*next;
+	t_list	*current;
+	t_list	*next;
+
+	if (!lst || !del)
+		return ;
 	current = *lst;
 	while (current != NULL)
 	{
@@ -49,7 +53,7 @@ void ft_lstclear(t_list **lst, void (*del)(void*))
 // 		current = current-> next;	
 // 	}
 // 	printf("\ndeleting...\n\n");
-	
+
 // 	ft_lstdelone(&root,del);
 
 // 	current = root;

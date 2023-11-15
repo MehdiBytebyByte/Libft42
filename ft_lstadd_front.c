@@ -6,7 +6,7 @@
 /*   By: mboughra <mboughra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/11 21:40:52 by mboughra          #+#    #+#             */
-/*   Updated: 2023/11/13 12:09:07 by mboughra         ###   ########.fr       */
+/*   Updated: 2023/11/15 10:00:18 by mboughra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,5 +47,4 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 // int	main(void)
 // {
 // 	t_list root = NULL;
-	
 // }

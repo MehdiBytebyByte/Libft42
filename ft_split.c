@@ -6,12 +6,11 @@
 /*   By: mboughra <mboughra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 16:30:25 by mboughra          #+#    #+#             */
-/*   Updated: 2023/11/14 22:32:43 by mboughra         ###   ########.fr       */
+/*   Updated: 2023/11/15 17:53:54 by mboughra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
 
 static int	ft_subscounter(char *str, char c)
 {
@@ -22,28 +21,30 @@ static int	ft_subscounter(char *str, char c)
 	count = 0;
 	while (str[i])
 	{
-		if (str[i] != c ){
+		if (str[i] != c)
+		{
 			count++;
-		while (str[i] && str[i] != c)
-			i++;
+			while (str[i] && str[i] != c)
+				i++;
 		}
 		while (str[i] && str[i] == c)
 			i++;
 	}
 	return (count);
 }
-static char *coppier(char *s,int y,int x)
+
+static char	*coppier(char *s, int y, int x)
 {
-	int i;
-	int len;
-	char *splited;
-	
+	int		i;
+	int		len;
+	char	*splited;
+
 	i = 0;
-	len = (x - y );
+	len = (x - y);
 	splited = (char *)malloc(sizeof(char) * (len + 1));
-	if(splited == NULL)
-		return(NULL);
-	while(s[i] && i < len && s[i + y])
+	if (splited == NULL)
+		return (NULL);
+	while (s[i] && i < len && s[i + y])
 	{
 		splited[i] = s[i + y];
 		i++;
@@ -51,10 +52,11 @@ static char *coppier(char *s,int y,int x)
 	splited[i] = '\0';
 	return (splited); 
 }
-static void freemem(char **splited)
+
+static void	freemem(char **splited)
 {
-	int i;
-	
+	int	i;
+
 	i = 0;
 	while (splited[i])
 	{
@@ -62,23 +64,24 @@ static void freemem(char **splited)
 		i++;
 	}
 }
-static char	**allocater(char *str, char c, int nsubs,char **splited)
+
+static char	**allocater(char *str, char c, int nsubs, char **splited)
 {
 	int	x;
 	int	y;
-	int index;
-	
+	int	index;
+
 	x = 0;
 	index = 0;
-	while(index < nsubs && str[x])
+	while (index < nsubs && str[x])
 	{
-		if(str[x] != c)
+		if (str[x] != c)
 		{
 			y = x;
-			while(str[x] != c && str[x])
+			while (str[x] != c && str[x])
 				x++;
-			splited[index++] = coppier(str,y,x);
-			if(splited[index - 1] == NULL)
+			splited[index++] = coppier(str, y, x);
+			if (splited[index - 1] == NULL)
 			{
 				freemem(splited);
 				free(splited);
@@ -88,24 +91,27 @@ static char	**allocater(char *str, char c, int nsubs,char **splited)
 		else
 			x++;
 	}
-	return(splited);
+	return (splited);
 }
-char **ft_split(char const *s, char c)
+
+char	**ft_split(char const *s, char c)
 {
 	int		i;
 	int		nsubs;
 	char	**splited;
-	
+
+	if (!s)
+		return (NULL);
 	i = 0;
-	nsubs = ft_subscounter((char *)s,c);
+	nsubs = ft_subscounter((char *)s, c);
 	splited = (char **)malloc(sizeof(char *) * (nsubs + 1));
-	if(!splited)
-		return(NULL);
-	splited = allocater((char *)s,c,nsubs,splited);
+	if (!splited)
+		return (NULL);
+	splited = allocater((char *)s, c, nsubs, splited);
 	if (splited == NULL)
 		return (NULL);
 	splited[nsubs] = NULL;
-	return(splited);
+	return (splited);
 }
 // int main(void)
 // {
@@ -121,4 +127,3 @@ char **ft_split(char const *s, char c)
 // 	//printf("%d",ft_subscounter(input,delimiter));
 //     return 0;
 // }
-

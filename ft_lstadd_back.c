@@ -6,7 +6,7 @@
 /*   By: mboughra <mboughra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 15:48:40 by mboughra          #+#    #+#             */
-/*   Updated: 2023/11/13 11:28:36 by mboughra         ###   ########.fr       */
+/*   Updated: 2023/11/15 10:01:35 by mboughra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list  *current;
+	t_list	*current;
 
 	current = *lst;
-	if(!current)
+	if (!current)
 	{
 		*lst = new;
-		return;
+		return ;
 	}
 	while (current->next != NULL)
 	{
@@ -37,7 +37,6 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 // 	root->next = malloc(sizeof(t_list));
 // 	root->next->content = ft_strdup("labas ");
 // 	root->next->next = NULL;
-	
 // 	t_list *current;
 // 	current = root;
 // 	while (current)
@@ -45,15 +44,11 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 // 		printf("%s",(char *)current->content);
 // 		current = current->next;
 // 	}
-	
-	
 // 	int d = ft_lstsize(root);
 // 	printf("\nbefore adding the last one the size is = %d\n",d);
-	
 // 	new = malloc(sizeof(t_list));
 // 	new->content = ft_strdup("3lik");
 // 	new->next = NULL;
-	
 // 	ft_lstadd_back(&root,new);
 // 	current = root;
 // 	while (current)
@@ -61,7 +56,6 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 // 		printf("%s",(char *)current->content);
 // 		current = current->next;
 // 	}
-
 // 	int c = ft_lstsize(root);
 // 	printf("\nbefore adding the last one the size is = %d\n",c);
 

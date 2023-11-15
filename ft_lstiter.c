@@ -6,21 +6,24 @@
 /*   By: mboughra <mboughra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 17:01:23 by mboughra          #+#    #+#             */
-/*   Updated: 2023/11/13 17:12:39 by mboughra         ###   ########.fr       */
+/*   Updated: 2023/11/15 17:49:03 by mboughra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstiter(t_list *lst, void (*f)(void *))
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	t_list *current;
+	t_list	*current;
+
+	if (lst == NULL || f == NULL)
+		return ;
 	current = lst;
-	while(current)
+	while (current)
 	{
 		f(current->content);
 		current = current->next;
-	} 
+	}
 }
 // void f(void *p)
 // {

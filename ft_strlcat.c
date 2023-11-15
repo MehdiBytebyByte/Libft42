@@ -6,7 +6,7 @@
 /*   By: mboughra <mboughra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 15:16:29 by mboughra          #+#    #+#             */
-/*   Updated: 2023/11/06 14:36:38 by mboughra         ###   ########.fr       */
+/*   Updated: 2023/11/15 11:52:52 by mboughra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ size_t	ft_strlcat(char	*dst, const char	*src, size_t	dstsize)
 	size_t	total;
 
 	i = 0;
-	dstlen = ft_strlen(dst);
 	srclen = ft_strlen(src);
 	if (dstsize == 0)
 		return (srclen);
+	dstlen = ft_strlen(dst);
 	if (dstsize <= dstlen)
 		return (dstsize + srclen);
 	total = dstlen + srclen;
@@ -43,7 +43,6 @@ size_t	ft_strlcat(char	*dst, const char	*src, size_t	dstsize)
 // 	char *a = NULL;
 // 	char b[] = "abc";
 
-// 	printf("the return is : %zu \nthe string concatanated is %s
-// \n",ft_strlcat(a,b,2),a);
-
+// 	printf("the return is : %zu \nthe
+//  string concatanated is %s\n",ft_strlcat(a,b,0),a);
 // }

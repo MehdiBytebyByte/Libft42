@@ -1,29 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboughra <mboughra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/10 22:36:55 by mboughra          #+#    #+#             */
-/*   Updated: 2023/11/15 17:59:31 by mboughra         ###   ########.fr       */
+/*   Created: 2023/11/15 17:57:27 by mboughra          #+#    #+#             */
+/*   Updated: 2023/11/15 20:34:16 by mboughra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	int	i;
-
-	i = 0;
-	if (fd < 0)
-		return ;
-	if (!s)
-		return ;
-	while (s[i])
+	t_list	*current;
+	if (!lst || !del)
+		return (NULL);
+	current = lst;
+	ft_lstnew(lst->content);
+	while(current)
 	{
-		write (fd, &s[i], 1);
-		i++;
+		
 	}
 }
+
+/* check if lst or f or del is NULL */
+/* loop over lst */
+    /* create a new element */
+    /* if new elem is null, clear the new list */
+/* add the new element to the back of the list */
+/* finally, return the new list */

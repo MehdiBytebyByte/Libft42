@@ -6,7 +6,7 @@
 /*   By: mboughra <mboughra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 15:20:42 by mboughra          #+#    #+#             */
-/*   Updated: 2023/11/12 15:34:56 by mboughra         ###   ########.fr       */
+/*   Updated: 2023/11/15 09:57:27 by mboughra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_lstsize(t_list *lst)
 {
 	t_list	*temp;
 	int		count;
-	
+
 	count = 0;
 	temp = lst;
 	while (temp)
