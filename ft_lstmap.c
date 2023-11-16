@@ -6,7 +6,7 @@
 /*   By: mboughra <mboughra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 17:57:27 by mboughra          #+#    #+#             */
-/*   Updated: 2023/11/16 21:30:37 by mboughra         ###   ########.fr       */
+/*   Updated: 2023/11/16 21:40:24 by mboughra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		if (!element)
 		{
 			ft_lstclear(&ret, del);
+			free(lst);
 			return (NULL);
 		}
 		ft_lstadd_back(&ret, element);
