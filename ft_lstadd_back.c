@@ -6,7 +6,7 @@
 /*   By: mboughra <mboughra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 15:48:40 by mboughra          #+#    #+#             */
-/*   Updated: 2023/11/15 10:01:35 by mboughra         ###   ########.fr       */
+/*   Updated: 2023/11/16 15:59:19 by mboughra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*current;
 
+	if (!new)
+		return ;
 	current = *lst;
 	if (!current)
 	{
@@ -28,10 +30,9 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	}
 	current->next = new;
 }
-
 // int	main(void)
 // {
-// 	t_list *root, *new;
+// 	t_list *root = NULL, *new;
 // 	root = malloc(sizeof(t_list));
 // 	root->content = ft_strdup("salam ");
 // 	root->next = malloc(sizeof(t_list));
@@ -58,5 +59,4 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 // 	}
 // 	int c = ft_lstsize(root);
 // 	printf("\nbefore adding the last one the size is = %d\n",c);
-
 // }

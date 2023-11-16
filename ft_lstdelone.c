@@ -6,7 +6,7 @@
 /*   By: mboughra <mboughra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 11:29:28 by mboughra          #+#    #+#             */
-/*   Updated: 2023/11/15 17:45:42 by mboughra         ###   ########.fr       */
+/*   Updated: 2023/11/16 14:58:27 by mboughra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	ft_lstdelone(t_list *lst, void (*del)(void*))
 // 	root->next->content = ft_strdup("me");
 // 	root->next->next = malloc(sizeof(t_list));
 // 	root->next->next->content = ft_strdup("if you dare");
-
+// 	root->next->next = NULL;
 // 	current = root;
 // 	while (current)
 // 	{
