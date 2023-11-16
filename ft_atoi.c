@@ -6,7 +6,7 @@
 /*   By: mboughra <mboughra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 14:14:47 by mboughra          #+#    #+#             */
-/*   Updated: 2023/11/04 18:21:49 by mboughra         ###   ########.fr       */
+/*   Updated: 2023/11/16 21:28:40 by mboughra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,3 @@ int	ft_atoi(const char *str)
 	}
 	return (re * s);
 }
-
-// int	main(void)
-// {
-// 	printf("%d\n",atoi(""));
-// 	printf("%d\n",ft_atoi(""));
-// }
