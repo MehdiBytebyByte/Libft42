@@ -6,7 +6,7 @@
 /*   By: mboughra <mboughra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 21:06:18 by mboughra          #+#    #+#             */
-/*   Updated: 2023/11/13 17:17:42 by mboughra         ###   ########.fr       */
+/*   Updated: 2023/11/17 14:57:27 by mboughra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	str[s1len + s2len] = '\0';
 	return (str);
 }
-// int	main(void)
-// {
-// 	char *a = "summoners ";
-// 	char *b = "rift";
-// 	printf("%s",ft_strjoin(a,b));
-// }

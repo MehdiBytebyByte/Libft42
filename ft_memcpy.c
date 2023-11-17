@@ -6,7 +6,7 @@
 /*   By: mboughra <mboughra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 17:29:23 by mboughra          #+#    #+#             */
-/*   Updated: 2023/11/05 14:32:06 by mboughra         ###   ########.fr       */
+/*   Updated: 2023/11/17 14:56:35 by mboughra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,3 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return (dst);
 }
-// #include <string.h>
-// int	main(void)
-// {
-// 	char *a = NULL;
-// 	char *b = NULL;
-// 	printf("%s",ft_memcpy(((void *)0), ((void *)0), 3));
-// }

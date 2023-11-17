@@ -6,7 +6,7 @@
 /*   By: mboughra <mboughra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 14:43:21 by mboughra          #+#    #+#             */
-/*   Updated: 2023/11/06 14:37:07 by mboughra         ###   ########.fr       */
+/*   Updated: 2023/11/17 15:05:49 by mboughra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	sub[i] = '\0';
 	return (sub);
 }
-// int	main(void)
-// {
-// 	printf("%s",ft_substr("hola", 2, 30));
-// }

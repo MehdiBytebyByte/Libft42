@@ -6,12 +6,11 @@
 /*   By: mboughra <mboughra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 15:18:54 by mboughra          #+#    #+#             */
-/*   Updated: 2023/11/05 14:30:56 by mboughra         ###   ########.fr       */
+/*   Updated: 2023/11/17 14:59:18 by mboughra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 char	*ft_strdup(const char *s1)
 {

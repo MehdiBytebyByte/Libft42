@@ -6,7 +6,7 @@
 /*   By: mboughra <mboughra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 21:59:24 by mboughra          #+#    #+#             */
-/*   Updated: 2023/11/09 11:10:32 by mboughra         ###   ########.fr       */
+/*   Updated: 2023/11/17 14:57:37 by mboughra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,17 +33,3 @@ size_t	ft_strlcpy(char	*dst, const char	*src, size_t	dstsize)
 	}
 	return (i);
 }
-// #include <string.h>
-//   int	main(void)
-//   {
-//  	char dest[30] = {};
-//  	char src[] = "salam al3alam";
-// 	size_t t = strlcpy(dest,src,0);
-// 	printf("%s\n",dest);
-// 	printf("%zu\n",t);
-//  	char dest2[30] = {};
-//  	char src2[] = "salam al3alam";
-// 	size_t t2 = ft_strlcpy(dest2,src2,0);
-// 	printf("%s\n",dest2);
-// 	printf("%zu\n",t2);
-// 	}

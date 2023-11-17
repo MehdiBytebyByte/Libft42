@@ -6,7 +6,7 @@
 /*   By: mboughra <mboughra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 19:23:21 by mboughra          #+#    #+#             */
-/*   Updated: 2023/11/16 15:53:28 by mboughra         ###   ########.fr       */
+/*   Updated: 2023/11/17 16:53:40 by mboughra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,9 @@
 
 # include <unistd.h>
 # include <stdlib.h>
-# include <stdio.h> //delete me pleaaaaase don't forget !!!!
+# include <stdio.h>
 # include <string.h>
+# include <stdint.h>
 
 typedef struct s_list
 {

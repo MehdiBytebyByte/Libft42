@@ -6,7 +6,7 @@
 /*   By: mboughra <mboughra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 12:43:54 by mboughra          #+#    #+#             */
-/*   Updated: 2023/11/16 19:58:23 by mboughra         ###   ########.fr       */
+/*   Updated: 2023/11/17 12:07:19 by mboughra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,3 @@ char	*ft_itoa(int n)
 	ret = filler(ret, count, n);
 	return (ret);
 }
-// int main(void)
-// {
-// 	printf("%s",ft_itoa(0));
-// }

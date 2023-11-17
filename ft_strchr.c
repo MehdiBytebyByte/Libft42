@@ -6,7 +6,7 @@
 /*   By: mboughra <mboughra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 14:40:00 by mboughra          #+#    #+#             */
-/*   Updated: 2023/11/05 14:31:24 by mboughra         ###   ########.fr       */
+/*   Updated: 2023/11/17 14:57:21 by mboughra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,3 @@ char	*ft_strchr(const char *s, int c)
 		return (&ps[i]);
 	return (NULL);
 }
-// int	main(void)
-// {
-// 	printf("%s",strchr("abcdefgh",'\0'));
-// }

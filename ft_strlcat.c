@@ -6,7 +6,7 @@
 /*   By: mboughra <mboughra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 15:16:29 by mboughra          #+#    #+#             */
-/*   Updated: 2023/11/15 11:52:52 by mboughra         ###   ########.fr       */
+/*   Updated: 2023/11/17 14:57:32 by mboughra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,14 +35,3 @@ size_t	ft_strlcat(char	*dst, const char	*src, size_t	dstsize)
 	dst[dstlen + i] = '\0';
 	return (total);
 }
-
-// #include <string.h>
-
-// int	main(void)
-// {
-// 	char *a = NULL;
-// 	char b[] = "abc";
-
-// 	printf("the return is : %zu \nthe
-//  string concatanated is %s\n",ft_strlcat(a,b,0),a);
-// }

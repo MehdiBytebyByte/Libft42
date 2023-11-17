@@ -6,7 +6,7 @@
 /*   By: mboughra <mboughra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 11:41:34 by mboughra          #+#    #+#             */
-/*   Updated: 2023/11/03 15:57:46 by mboughra         ###   ########.fr       */
+/*   Updated: 2023/11/17 14:59:50 by mboughra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,13 +31,3 @@ void	*ft_memchr(const void	*s, int c, size_t	n)
 	}
 	return (NULL);
 }
-
-// #include <string.h>
-
-// int	main(void)
-// {
-// 	char str[] = "abcdefgh";
-// 	int d = 103;
-// 	printf("%s\n",memchr(str,d,9));
-// 	printf("%s",ft_memchr(str,d,9));
-// }

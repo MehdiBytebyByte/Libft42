@@ -6,7 +6,7 @@
 /*   By: mboughra <mboughra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 19:23:16 by mboughra          #+#    #+#             */
-/*   Updated: 2023/10/31 14:10:41 by mboughra         ###   ########.fr       */
+/*   Updated: 2023/11/17 12:07:06 by mboughra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,15 +20,3 @@ int	ft_isdigit(int c)
 	}
 	return (0);
 }
-/*
-#include<stdio.h>
-
-int	main(void)
-{
-	printf("%d",ft_isdigit('0'));		
-	printf("%d",ft_isdigit('a'));
-	printf("%d",ft_isdigit('/'));
-	printf("%d",ft_isdigit('*'));
-	return 0;
-}
-*/

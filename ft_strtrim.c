@@ -6,7 +6,7 @@
 /*   By: mboughra <mboughra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 13:52:52 by mboughra          #+#    #+#             */
-/*   Updated: 2023/11/10 19:21:18 by mboughra         ###   ########.fr       */
+/*   Updated: 2023/11/17 18:25:53 by mboughra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (ft_strdup(""));
 	while (start < ft_strlen(s1) && ft_strchr(set, s1[start]))
 		start++;
-	end = ft_strlen(s1) - 1;
+	end = ft_strlen(s1);
 	while (end > start && ft_strchr(set, s1[end]))
 		end--;
 	trisize = (end - start +1); 
@@ -36,7 +36,4 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ft_strlcpy(trimmed, s1 + start, trisize + 1);
 	return (trimmed);
 }
-// int	main(void)
-// {
-// 	printf("%s",ft_strtrim("NOOOBLEAGUE OF NOOBS LEGENDSBOBOB","NOOB"));	
-// }
+

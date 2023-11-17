@@ -6,7 +6,7 @@
 /*   By: mboughra <mboughra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 12:45:20 by mboughra          #+#    #+#             */
-/*   Updated: 2023/11/05 14:32:20 by mboughra         ###   ########.fr       */
+/*   Updated: 2023/11/17 12:06:29 by mboughra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,3 @@ int	ft_memcmp(const void	*s1, const void	*s2, size_t	n)
 		return (0);
 	return (ss1[i] - ss2[i]);
 }
-// int	main(void)
-// {
-// 	char *s = "abddef";
-// 	char *s2 = "abcdef";
-
-// 	printf("%d\n",ft_memcmp(s,s2,4));
-// }

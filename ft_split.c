@@ -6,7 +6,7 @@
 /*   By: mboughra <mboughra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 16:30:25 by mboughra          #+#    #+#             */
-/*   Updated: 2023/11/15 17:53:54 by mboughra         ###   ########.fr       */
+/*   Updated: 2023/11/17 14:57:16 by mboughra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,17 +113,3 @@ char	**ft_split(char const *s, char c)
 	splited[nsubs] = NULL;
 	return (splited);
 }
-// int main(void)
-// {
-//     const char *input = "hello";
-//     char delimiter = ' ';
-// 	char **result = ft_split(input,delimiter);
-// 	int i = 0;
-// 	while (result[i])
-// 	{
-// 		printf("%s",result[i]);
-// 		i++;
-// 	}
-// 	//printf("%d",ft_subscounter(input,delimiter));
-//     return 0;
-// }

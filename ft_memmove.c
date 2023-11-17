@@ -6,7 +6,7 @@
 /*   By: mboughra <mboughra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 20:38:20 by mboughra          #+#    #+#             */
-/*   Updated: 2023/11/05 14:31:51 by mboughra         ###   ########.fr       */
+/*   Updated: 2023/11/17 14:56:39 by mboughra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,3 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return (dst);
 }
-
-// int	main()
-// {
-// 	char *b = "abcdef";
-// 	printf("%s",ft_memmove(((void *)0), NULL, 5));
-// }
