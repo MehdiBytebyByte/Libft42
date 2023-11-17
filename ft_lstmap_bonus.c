@@ -6,7 +6,7 @@
 /*   By: mboughra <mboughra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 17:57:27 by mboughra          #+#    #+#             */
-/*   Updated: 2023/11/17 18:19:44 by mboughra         ###   ########.fr       */
+/*   Updated: 2023/11/17 19:40:17 by mboughra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,11 +51,9 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 // {
 // 	free(content);
 // }
-
 // int main(void)
 // {
 // 	t_list *list,*abc;
-
 // 	list = (t_list *)malloc(sizeof(t_list));
 // 	list->content = ft_strdup("123456");
 // 	list->next = (t_list *)malloc(sizeof(t_list));
@@ -67,5 +65,4 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 // 		printf("%s",abc->content);
 // 		abc = abc->next;
 // 	}
-	
 // }

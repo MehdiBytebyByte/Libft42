@@ -6,7 +6,7 @@
 /*   By: mboughra <mboughra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 13:52:52 by mboughra          #+#    #+#             */
-/*   Updated: 2023/11/17 18:25:53 by mboughra         ###   ########.fr       */
+/*   Updated: 2023/11/17 19:38:04 by mboughra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,4 +36,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ft_strlcpy(trimmed, s1 + start, trisize + 1);
 	return (trimmed);
 }
-
