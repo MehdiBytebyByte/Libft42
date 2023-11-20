@@ -6,7 +6,7 @@
 /*   By: mboughra <mboughra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 14:00:47 by mboughra          #+#    #+#             */
-/*   Updated: 2023/11/17 19:36:12 by mboughra         ###   ########.fr       */
+/*   Updated: 2023/11/18 09:32:17 by mboughra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,37 +29,3 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 	}
 	*lst = NULL;
 }
-// void del(void *llist)
-// {
-// 	free(llist);
-// }
-
-// int	main(void)
-// {
-// 	t_list *root,*current;
-
-// 	root = malloc(sizeof(t_list));
-// 	root->content = ft_strdup("fight");
-// 	root->next = malloc(sizeof(t_list));
-// 	root->next->content = ft_strdup("me");
-// 	root->next->next = malloc(sizeof(t_list));
-// 	root->next->next->content = ft_strdup("if you dare");
-// 	root->next->next->next = NULL;
-
-// 	current = root;
-// 	while (current)
-// 	{
-// 		printf("%s\n",current->content);
-// 		current = current-> next;	
-// 	}
-// 	printf("\ndeleting...\n\n");
-
-// 	ft_lstdelone(&root,del);
-
-// 	current = root;
-// 	while (current)
-// 	{
-// 		printf("%s\n",current->content);
-// 		current = current-> next;	
-// 	}
-// }

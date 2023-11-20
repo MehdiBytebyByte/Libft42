@@ -13,7 +13,7 @@ BSRCF = ft_lstnew_bonus.c ft_lstlast_bonus.c ft_lstadd_front_bonus.c \
 
 OBJF = $(SRCF:.c=.o)
 BOBJF = $(BSRCF:_bonus.c=_bonus.o)
-CFLAGS = -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra -Werror
 CC = cc
 NAME = libft.a
 
@@ -23,13 +23,10 @@ $(NAME):$(OBJF)
 	ar -rc $(NAME) $(OBJF)
 
 %.o: %.c libft.h
-	$(CC) $(CFLAGS) -c -o $@ $<
+	$(CC) $(FLAGS)  -c $< -o $@
 
 bonus: $(BOBJF) $(NAME)
 	ar -rc $(NAME) $(BOBJF)
-
-%_bonus.o: %_bonus.c
-	$(CC) $(FLAGS) -c -o $@ $<
 
 clean:
 	$(RM) $(OBJF) $(BOBJF)

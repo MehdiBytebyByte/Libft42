@@ -6,7 +6,7 @@
 /*   By: mboughra <mboughra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 20:38:20 by mboughra          #+#    #+#             */
-/*   Updated: 2023/11/17 14:56:39 by mboughra         ###   ########.fr       */
+/*   Updated: 2023/11/18 16:32:47 by mboughra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	i = 0;
 	if (!dst && !src)
 		return (NULL);
-	if (c_dst < c_src && ((c_dst + len) > c_src))
+	if (c_dst < c_src)
 		ft_memcpy(dst, src, len);
 	else
 	{
