@@ -6,7 +6,7 @@
 /*   By: mboughra <mboughra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 16:30:25 by mboughra          #+#    #+#             */
-/*   Updated: 2023/11/19 16:28:12 by mboughra         ###   ########.fr       */
+/*   Updated: 2023/11/21 21:57:09 by mboughra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,4 +112,18 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	splited[nsubs] = NULL;
 	return (splited);
+}
+#include <stdio.h>
+int	main(void)
+{
+	char **p = ft_split(NULL,'\0');
+
+	if(!**p)
+	{
+		printf("NNULL");
+	}
+	
+	
+		// printf("%s",*p);
+	
 }

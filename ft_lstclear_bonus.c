@@ -6,7 +6,7 @@
 /*   By: mboughra <mboughra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 14:00:47 by mboughra          #+#    #+#             */
-/*   Updated: 2023/11/18 09:32:17 by mboughra         ###   ########.fr       */
+/*   Updated: 2023/11/21 17:51:25 by mboughra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,17 @@
 void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
 	t_list	*current;
-	t_list	*next;
+	t_list	*holder;
 
 	if (!lst || !del)
 		return ;
 	current = *lst;
 	while (current != NULL)
 	{
-		next = current->next;
+		holder = current->next;
 		del(current->content);
 		free(current);
-		current = next;
+		current = holder;
 	}
 	*lst = NULL;
 }
