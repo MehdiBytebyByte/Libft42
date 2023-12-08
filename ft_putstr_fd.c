@@ -6,7 +6,7 @@
 /*   By: mboughra <mboughra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 22:36:55 by mboughra          #+#    #+#             */
-/*   Updated: 2023/11/20 16:57:05 by mboughra         ###   ########.fr       */
+/*   Updated: 2023/12/07 17:52:44 by mboughra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,7 @@ void	ft_putstr_fd(char *s, int fd)
 	int	i;
 
 	i = 0;
-	if (fd < 0)
-		return ;
-	if (!s)
+	if (fd < 0 || !s)
 		return ;
 	while (s[i])
 	{

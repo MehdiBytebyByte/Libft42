@@ -6,7 +6,7 @@
 /*   By: mboughra <mboughra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 16:30:25 by mboughra          #+#    #+#             */
-/*   Updated: 2023/11/21 21:57:09 by mboughra         ###   ########.fr       */
+/*   Updated: 2023/12/05 14:30:36 by mboughra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,15 +50,15 @@ static char	*coppier(char *s, int y, int x)
 		i++;
 	}
 	splited[i] = '\0';
-	return (splited); 
+	return (splited);
 }
 
-static void	freemem(char **splited)
+static void	freemem(char **splited, int r)
 {
 	int	i;
 
 	i = 0;
-	while (splited[i])
+	while (i < r)
 	{
 		free(splited[i]);
 		i++;
@@ -83,7 +83,7 @@ static char	**allocater(char *str, char c, int nsubs, char **splited)
 			splited[index++] = coppier(str, y, x);
 			if (splited[index - 1] == NULL)
 			{
-				freemem(splited);
+				freemem(splited, index);
 				free(splited);
 				return (NULL);
 			}
@@ -112,18 +112,4 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	splited[nsubs] = NULL;
 	return (splited);
-}
-#include <stdio.h>
-int	main(void)
-{
-	char **p = ft_split(NULL,'\0');
-
-	if(!**p)
-	{
-		printf("NNULL");
-	}
-	
-	
-		// printf("%s",*p);
-	
 }

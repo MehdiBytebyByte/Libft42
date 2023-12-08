@@ -6,7 +6,7 @@
 /*   By: mboughra <mboughra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 19:23:21 by mboughra          #+#    #+#             */
-/*   Updated: 2023/11/21 17:21:57 by mboughra         ###   ########.fr       */
+/*   Updated: 2023/12/05 14:29:36 by mboughra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
-}t_list;
+}	t_list;
 
 void	ft_bzero(void *s, size_t n);
 int		ft_isalpha(int c);

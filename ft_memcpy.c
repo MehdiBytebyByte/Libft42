@@ -6,7 +6,7 @@
 /*   By: mboughra <mboughra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 17:29:23 by mboughra          #+#    #+#             */
-/*   Updated: 2023/11/17 14:56:35 by mboughra         ###   ########.fr       */
+/*   Updated: 2023/11/24 17:38:23 by mboughra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	unsigned char	*c_src;
 	size_t			i;
 
-	if (!dst && !src)
-		return (NULL);
+	if (dst == src)
+		return ((void *)src);
 	c_dest = (unsigned char *)dst;
 	c_src = (unsigned char *)src;
 	i = 0;

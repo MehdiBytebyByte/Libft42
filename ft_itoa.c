@@ -6,7 +6,7 @@
 /*   By: mboughra <mboughra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 12:43:54 by mboughra          #+#    #+#             */
-/*   Updated: 2023/11/21 16:43:22 by mboughra         ###   ########.fr       */
+/*   Updated: 2023/12/05 14:31:37 by mboughra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static char	*filler(char *ret, long count, long n)
 		while (count >= 0)
 		{
 			n2 = n % 10;
-			ret[count--] = n2 + '0'; 
+			ret[count--] = n2 + '0';
 			n = n / 10;
 		}
 	}
@@ -32,7 +32,7 @@ static char	*filler(char *ret, long count, long n)
 		while (count >= 1)
 		{
 			n2 = n % 10;
-			ret[count--] = n2 + '0'; 
+			ret[count--] = n2 + '0';
 			n = n / 10;
 		}
 		ret[0] = '-';

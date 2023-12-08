@@ -6,7 +6,7 @@
 /*   By: mboughra <mboughra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 13:52:52 by mboughra          #+#    #+#             */
-/*   Updated: 2023/11/17 19:38:04 by mboughra         ###   ########.fr       */
+/*   Updated: 2023/12/05 14:29:54 by mboughra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	end = ft_strlen(s1);
 	while (end > start && ft_strchr(set, s1[end]))
 		end--;
-	trisize = (end - start +1); 
+	trisize = (end - start +1);
 	trimmed = (char *) malloc(trisize + 1);
 	if (!trimmed)
 		return (NULL);
