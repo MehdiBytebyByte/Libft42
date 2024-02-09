@@ -6,7 +6,7 @@
 /*   By: mboughra <mboughra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 20:14:20 by mboughra          #+#    #+#             */
-/*   Updated: 2023/12/07 14:54:15 by mboughra         ###   ########.fr       */
+/*   Updated: 2023/11/17 14:57:46 by mboughra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	size_t	i;
 	char	*re;
 
-	if (!s || !f)
+	if (s == NULL)
 		return (NULL);
 	len = ft_strlen(s);
 	re = (char *)malloc(sizeof(char) * (len + 1));
